@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "moo"
+version = "0.1.0"
+description = "Data for CoW Protocol"
+authors = ["gnart <nvtrang91@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+polars = "^1.17.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
