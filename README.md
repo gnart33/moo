@@ -2,17 +2,14 @@
 
 Moo is a tool for collecting and processing data from the CowSwap protocol.
 
-## Data Collector
+## Approach 1. ETL
 
-- The Graph
-- GoldSky
+API → Polars/Pandas → Postgres
 
-## Data Processor
+## Scaling up
 
-Polars -> Postgres
+Data lake pattern
 
-## Data Visualization
+## Realtime
 
-- Streamlit
-
-## Data Storage
+Kafka → Polars/Pandas → Postgres

@@ -9,5 +9,4 @@ class TheGraphConnector(BaseConnector):
         self.base_url = "https://gateway.thegraph.com/api"
 
     def execute_query(self, query: str) -> Dict:
-        # Implementation here
         pass

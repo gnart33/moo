@@ -7,6 +7,8 @@ class PostgresLoader:
     def __init__(self, connection_string: str):
         self.engine = create_engine(connection_string)
 
-    def load_swaps(self, df: pd.DataFrame):
+    def load_swaps(self, df):
         with self.engine.begin() as conn:
-            df.to_sql("swaps", conn, if_exists="append", index=False)
+            df.to_pandas().to_sql(
+                name="swaps", con=conn, if_exists="append", index=False
+            )

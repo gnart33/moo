@@ -1,0 +1,21 @@
+extract:
+  subgraph_id: "cowswap/cowswap" # Replace with actual subgraph ID
+  api_key: "your-api-key-here" # Replace with actual API key
+  batch_size: 1000
+  max_retries: 3
+
+# Transformation Configuration
+transform:
+  validation_rules:
+    min_amount: 0
+    max_amount: 1e12
+  decimal_places: 18
+  timestamp_format: "%Y-%m-%d %H:%M:%S"
+
+# Loading Configuration
+load:
+  connection_string: "postgresql://postgres:postgres@localhost:5432/moo" # Updated to match docker-compose credentials
+  batch_size: 5000
+  timeout: 300
+  table_name: "swaps"
+  if_exists: "append"

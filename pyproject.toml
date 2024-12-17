@@ -10,6 +10,11 @@ python = "^3.12"
 requests = "^2.32.3"
 python-dotenv = "^1.0.1"
 polars = "^1.17.1"
+pyyaml = "^6.0.2"
+sqlalchemy = "^2.0.36"
+pandas = "^2.2.3"
+psycopg2 = "^2.9.10"
+pyarrow = "^18.1.0"
 
 
 [build-system]
