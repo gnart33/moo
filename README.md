@@ -2,14 +2,29 @@
 
 Moo is a tool for collecting and processing data from the CowSwap protocol.
 
-## Approach 1. ETL
+## ETL
 
-API → Polars/Pandas → Postgres
+API → Polars → Postgres
 
-## Scaling up
+- Data is collected from the The Graph API
+- Then transformed, validated, and normalized into a dataframe
+- Finally, loaded into Postgres
 
-Data lake pattern
+### Running the data pipeline
+- Environment variables:
+```bash
+cp .env.example .env
+```
+Edit the `.env` file with your credentials
 
-## Realtime
+- Pipeline config:
+Edit the `config/pipeline_config.yaml` file
 
-Kafka → Polars/Pandas → Postgres
+- Run the pipeline:
+
+```bash
+python src/moo/run.py
+```
+
+### Running the analytics
+

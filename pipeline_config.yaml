@@ -1,6 +1,11 @@
+# Environment Configuration
+env:
+  load_dotenv: true
+  env_file: ".env"
+
 extract:
-  subgraph_id: "cowswap/cowswap" # Replace with actual subgraph ID
-  api_key: "your-api-key-here" # Replace with actual API key
+  subgraph_id: ${SUBGRAPH_ID}
+  api_key: ${API_KEY}
   batch_size: 1000
   max_retries: 3
 
@@ -14,7 +19,7 @@ transform:
 
 # Loading Configuration
 load:
-  connection_string: "postgresql://postgres:postgres@localhost:5432/moo" # Updated to match docker-compose credentials
+  connection_string: "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/moo" # Updated to match docker-compose credentials
   batch_size: 5000
   timeout: 300
   table_name: "swaps"

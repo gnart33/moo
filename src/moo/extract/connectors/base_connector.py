@@ -2,8 +2,8 @@ from typing import Dict, Any
 
 
 class BaseConnector:
-    def __init__(self, connection_params: Dict[str, Any]):
-        self.connection_params = connection_params
+    def __init__(self, config: Dict[str, Any]):
+        self.config = config
 
     def connect(self):
         raise NotImplementedError
