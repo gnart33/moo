@@ -32,7 +32,9 @@ class SwapTransformer:
                 # Convert Unix timestamp to datetime
                 pl.col("blockTimestamp")
                 .cast(pl.Int64)
-                .map_elements(lambda x: datetime.fromtimestamp(x))
+                .map_elements(
+                    lambda x: datetime.fromtimestamp(x), return_dtype=pl.Datetime
+                )
                 .cast(pl.Datetime),
                 # Normalize addresses to lowercase
                 pl.col("tokenInSymbol").str.to_lowercase(),

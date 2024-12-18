@@ -1,0 +1,21 @@
+certifi==2024.12.14
+charset-normalizer==3.4.0
+e==1.4.5
+greenlet==3.1.1
+idna==3.10
+moo @ file:///home/gnart/Projects/bglabs/de/moo
+numpy==2.2.0
+pandas==2.2.3
+polars==1.17.1
+psycopg2==2.9.10
+pyarrow==18.1.0
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+pytz==2024.2
+PyYAML==6.0.2
+requests==2.32.3
+six==1.17.0
+SQLAlchemy==2.0.36
+typing_extensions==4.12.2
+tzdata==2024.2
+urllib3==2.2.3

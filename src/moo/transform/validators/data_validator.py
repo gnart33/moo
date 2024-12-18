@@ -39,7 +39,7 @@ class SwapDataValidator:
             "tokenAmountOut",
         }
 
-        missing_columns = required_columns - set(df.columns)
+        missing_columns = required_columns - set(df.collect_schema().names())
         if missing_columns:
             return False, f"Missing required columns: {missing_columns}"
         return True, None

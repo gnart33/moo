@@ -1,0 +1,14 @@
+extract:
+  subgraph_base_url: "https://gateway.thegraph.com/api"
+  cowswap_subgraph_id: "E31tHMWuP5bYmUxKjAap7Y3BgVDzvqLKNHofWhmNW6t4"
+  raw_data_dir: "data/raw"
+
+transform:
+  decimal_places: 18
+  timestamp_format: "%Y-%m-%d %H:%M:%S"
+
+load:
+  batch_size: 5000
+  timeout: 300
+  table_name: "swaps"
+  if_exists: "append"
